@@ -5,9 +5,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
+|----------------------------------------------------------------------
 | API Routes
-|--------------------------------------------------------------------------
+|----------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post("register_admin",[AuthController::class,"register"]);
+Route::post("register_admin", [AuthController::class, "register"]);
+Route::get("get_user", [AuthController::class, "getUser"]);
+Route::get("/get_detail_user/{id}",[AuthController::class,"getDetailUser"]);
+Route::put("/update_user/{id}",[AuthController::class,"update_user"]);
+Route::delete('hapus_user/{id}', [AuthController::class, 'hapus_user']);
+
