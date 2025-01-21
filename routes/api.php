@@ -32,5 +32,7 @@ Route::get("get_Movie", [MovieController::class, "getMovie"]);
 Route::get("get_detail_Movie/{id}", [MovieController::class, "getDetailMovie"]);
 Route::put("update_Movie/{id}", [MovieController::class, "update_Movie"]);
 Route::delete("hapus_Movie/{id}", [MovieController::class, "hapus_Movie"]);
+Route::post("/login", [AuthController::class, "login"]);
+Route::get("logout", [AuthController::class, "logout"]);
 
 
